@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    &--nav {
+        list-style: none;
+        display: flex;
+        gap: 12px;
+        margin-right: 12px;
+
+        &__link {
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
