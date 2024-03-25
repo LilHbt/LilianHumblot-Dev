@@ -42,6 +42,7 @@ const CardCompetences = (props) => {
         <p>{description}</p>
       </Card>
       <Modal
+        width={600}
         title={title}
         open={isModalOpen}
         onOk={handleOk}

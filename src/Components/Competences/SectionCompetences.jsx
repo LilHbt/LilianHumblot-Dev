@@ -5,6 +5,7 @@ import logoReact from "../../Assets/img/React.svg";
 import logoHTMLCSS from "../../Assets/img/CSS3 HTML5.svg";
 import logoJS from "../../Assets/img/JavaScript.png";
 import "./SectionCompetences.scss";
+import CardProject from "../../Page/Projects/CardProject";
 
 const SectionCompetences = () => {
   return (
@@ -21,6 +22,13 @@ const SectionCompetences = () => {
               title="HTML5/CSS3"
               logo={logoHTMLCSS}
               description="description de la competence"
+              modalContent={
+                <CardProject
+                  title="Oh-My-Food"
+                  description="Projet de site de prise de commande, utilisant uniquement HTML5/CSS3 pour l'intégralite du code."
+                  siteToVisit="https://lilhbt.github.io/Oh-my-food/"
+                />
+              }
             />
             <CardCompetences
               title="JavaScript"

@@ -14,7 +14,9 @@ const CardProject = (props) => {
       cover={<img src={source} alt={alt} />}
     >
       <p>{description}</p>
-      <a href={siteToVisit}>Visiter le site</a>
+      <a href={siteToVisit} target="blank">
+        Visiter le site
+      </a>
     </Card>
   );
 };

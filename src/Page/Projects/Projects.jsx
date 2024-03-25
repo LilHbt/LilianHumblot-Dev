@@ -14,7 +14,11 @@ const Projects = () => {
         <Space align="center" direction="vertical" size={32}>
           <Row>
             <Col span={24}>
-              <CardProject />
+              <CardProject
+                title="Oh-My-Food"
+                description="Projet de site de prise de commande, utilisant uniquement HTML5/CSS3 pour l'intégralite du code."
+                siteToVisit="https://lilhbt.github.io/Oh-my-food/"
+              />
             </Col>
           </Row>
           <Row>
