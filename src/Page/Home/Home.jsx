@@ -19,7 +19,7 @@ const Home = () => {
       <SectionCompetences />
       <Flex className="cta-flex" justify="center" align="center">
         <CTA buttonText="Voir mes projets" ctaLink="/projects" />
-        <CTA buttonText="Me contacter" ctaLink="contact" />
+        <CTA buttonText="Me contacter" ctaLink="/contact" />
       </Flex>
       <FloatButton
         icon={<ArrowUpOutlined />}
