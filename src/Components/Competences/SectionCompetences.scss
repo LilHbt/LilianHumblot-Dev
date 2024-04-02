@@ -7,3 +7,9 @@
     background-color: #EFE9F4;
     color: #171D1C;
 }
+
+@media (max-width:480px) {
+    .tabs {
+        size: small;
+    }
+}

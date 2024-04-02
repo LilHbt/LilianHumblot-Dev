@@ -46,15 +46,7 @@ const CardCompetences = (props) => {
     </div>
   ) : (
     <div>
-      <Card
-        style={{
-          width: 500,
-          minHeight: 300,
-        }}
-        title={title}
-        bordered={true}
-        className="cardCompetences"
-      >
+      <Card title={title} bordered={true} className="cardCompetences">
         <img
           style={{
             maxWidth: 150,

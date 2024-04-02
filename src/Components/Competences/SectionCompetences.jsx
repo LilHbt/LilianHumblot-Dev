@@ -114,11 +114,13 @@ const SectionCompetences = () => {
         </div>
         <Flex justify="center" gap={100}>
           <Tabs
-            size="large"
+            animated
+            size="middle"
             centered
             defaultActiveKey="1"
             items={items}
             onChange={onChange}
+            className="tabs"
           />
         </Flex>
       </div>
