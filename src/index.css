@@ -1,7 +1,29 @@
 body {
   margin: 0;
   text-align: center;
-  font-family: "Roboto", "Jura";
+  font-family: "Roboto";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #171d1c;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Jura";
+}
+::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #efe9f4;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #323635;
+  border-radius: 12px;
 }

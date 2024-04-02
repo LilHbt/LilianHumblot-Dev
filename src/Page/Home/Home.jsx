@@ -4,6 +4,7 @@ import SectionCompetences from "../../Components/Competences/SectionCompetences"
 import { Flex, FloatButton } from "antd";
 import { ArrowUpOutlined } from "@ant-design/icons";
 import CTA from "../../Components/CTA/CTA";
+import "./Home.scss";
 
 const Home = () => {
   const goToTop = () => {
@@ -16,7 +17,7 @@ const Home = () => {
     <div>
       <Presentation />
       <SectionCompetences />
-      <Flex justify="center" gap={100} align="center">
+      <Flex className="cta-flex" justify="center" align="center">
         <CTA buttonText="Voir mes projets" ctaLink="/projects" />
         <CTA buttonText="Me contacter" ctaLink="contact" />
       </Flex>

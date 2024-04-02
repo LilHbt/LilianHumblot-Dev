@@ -8,9 +8,12 @@ const CardCompetences = (props) => {
   const { alt } = props;
   const { description } = props;
   const { modalContent } = props;
+  const { tabKey } = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
-    setIsModalOpen(true);
+    if (tabKey === "1") {
+      setIsModalOpen(true);
+    }
   };
   const handleOk = () => {
     setIsModalOpen(false);
@@ -18,15 +21,36 @@ const CardCompetences = (props) => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-  return (
+  return tabKey === "1" ? (
     <div>
       <Card
         onClick={showModal}
+        hoverable
+        title={title}
+        bordered={true}
+        className="cardCompetences"
+      >
+        <img className="logo" src={logo} alt={alt} />
+        <p>{description}</p>
+      </Card>
+      <Modal
+        style={{ display: "flex", justifyContent: "center" }}
+        width={600}
+        title={title}
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        {modalContent}
+      </Modal>
+    </div>
+  ) : (
+    <div>
+      <Card
         style={{
           width: 500,
-          height: 300,
+          minHeight: 300,
         }}
-        hoverable
         title={title}
         bordered={true}
         className="cardCompetences"
@@ -41,15 +65,6 @@ const CardCompetences = (props) => {
         />
         <p>{description}</p>
       </Card>
-      <Modal
-        width={600}
-        title={title}
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        {modalContent}
-      </Modal>
     </div>
   );
 };

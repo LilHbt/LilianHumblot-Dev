@@ -1,0 +1,17 @@
+.cardCompetences {
+    width: 500px;
+
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width:768px) {
+    .cardCompetences {
+        width: 300px;
+
+
+    }
+}

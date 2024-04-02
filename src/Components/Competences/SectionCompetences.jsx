@@ -1,64 +1,127 @@
-import React from "react";
-import { Flex, Space } from "antd";
+import React, { useState } from "react";
+import { Flex, Space, Tabs } from "antd";
 import CardCompetences from "./CardCompetences";
 import logoReact from "../../Assets/img/React.svg";
-import logoHTMLCSS from "../../Assets/img/CSS3 HTML5.svg";
-import logoJS from "../../Assets/img/JavaScript.png";
+import logoHTMLCSS from "../../Assets/img/CSS3 HTML5.png";
+import logoJS from "../../Assets/img/logo-javascript.svg";
+import logoKasa from "../../Assets/img/Kasa-logo.png";
+import logoOMF from "../../Assets/img/ohmyfood.png";
+import imgCom from "../../Assets/img/comIcon.png";
+import imgAdaptation from "../../Assets/img/adaptation.png";
+import imgFlex from "../../Assets/img/flexibility.svg";
+
 import "./SectionCompetences.scss";
-import CardProject from "../../Page/Projects/CardProject";
+import CardProject from "../CardProject/CardProject.jsx";
 
 const SectionCompetences = () => {
-  return (
-    <section>
-      <div>
-        <h3>Mes compétences</h3>
-        <p>que je mettrai en oeuvre pour vos projets</p>
-      </div>
-      <Flex justify="center" gap={100}>
+  const [tabKey, setTabKey] = useState("1");
+
+  const onChange = (key) => {
+    setTabKey(key);
+  };
+
+  const items = [
+    {
+      key: "1",
+      label: "Compétences techniques",
+      children: (
         <div>
-          <h4>Compétences technique</h4>
           <Space direction="vertical" size={16}>
             <CardCompetences
+              tabKey={tabKey}
+              title="React"
+              logo={logoReact}
+              alt="Logo React"
+              description="React est une bibliothèque basée sur le language Javascript permettant de fractionner le code en composant reutilisable et fournissant beaucoup d'outils pour améliorer le developpement. React est extremement populaire auprès de nombreux developpeurs."
+              modalContent={
+                <CardProject
+                  title="Kasa"
+                  source={logoKasa}
+                  alt="Logo Kasa"
+                  description="Site de location immobiliaire créé en utilisant React."
+                  siteToVisit="https://lilhbt.github.io/Kasa/"
+                />
+              }
+            />
+            <CardCompetences
+              tabKey={tabKey}
+              title="JavaScript"
+              logo={logoJS}
+              alt="Logo Javascript"
+              description="Javascript est un language de programmation permettant d'ajouter de l'intéractivité à la page web."
+            />
+
+            <CardCompetences
+              tabKey={tabKey}
               title="HTML5/CSS3"
               logo={logoHTMLCSS}
-              description="description de la competence"
+              alt="Logo HTML/CSS"
+              description="Les languages HTML et CSS forment la base du developement web, 
+              le premier permet de structurer la page et ensuite le second offre la possibilité de styliser le site."
               modalContent={
                 <CardProject
                   title="Oh-My-Food"
+                  source={logoOMF}
+                  alt="Logo Oh-My-Food"
                   description="Projet de site de prise de commande, utilisant uniquement HTML5/CSS3 pour l'intégralite du code."
                   siteToVisit="https://lilhbt.github.io/Oh-my-food/"
                 />
               }
             />
-            <CardCompetences
-              title="JavaScript"
-              description="description de la competence"
-            />
-            <CardCompetences
-              title="React"
-              logo={logoReact}
-              description="description de la competence"
-            />
           </Space>
         </div>
+      ),
+    },
+    {
+      key: "2",
+      label: "Compétences transverses",
+      children: (
         <div>
-          <h4>Compétences transverses</h4>
           <Space direction="vertical" size={16}>
             <CardCompetences
+              tabKey={tabKey}
+              logo={imgCom}
+              alt="Icon Communication"
               title="Ecoute et communication"
-              description="description de la competence"
+              description="Grâce à mes expériences professionelle passée, j'ai pu acquérir une grande capacité de communication afin d'être certain d'obtenir
+               et de transmettre toutes les informations necéssaire au bon déroulemnt d'un projet."
             />
             <CardCompetences
+              tabKey={tabKey}
+              logo={imgAdaptation}
+              alt="Icon Adaptation"
               title="Adaptation aux besoins"
-              description="description de la competence"
+              description="Ma capacité d'adaptation à vos besoins me permettra de mettre a profits toutes mes connaissances afin de les utiliser au mieux pour votre projet."
             />
             <CardCompetences
-              title="Flexibilté"
-              description="description de la competence"
+              tabKey={tabKey}
+              logo={imgFlex}
+              alt="Icon Flexibilité"
+              title="Flexibilité"
+              description="Je saurai mettre en place de nouvelle méthode et toujours rester au courant des nouveautés afin de vous proposer un projet au gout du jour."
             />
           </Space>
         </div>
-      </Flex>
+      ),
+    },
+  ];
+  return (
+    <section>
+      <div className="competences--wrapper">
+        <div>
+          <h3>Mes compétences</h3>
+          <p>que je mettrai en oeuvre pour vos projets</p>
+        </div>
+        <Flex justify="center" gap={100}>
+          <Tabs
+            size="large"
+            centered
+            defaultActiveKey="1"
+            items={items}
+            onChange={onChange}
+          />
+        </Flex>
+      </div>
     </section>
   );
 };

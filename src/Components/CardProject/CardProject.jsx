@@ -8,13 +8,18 @@ const CardProject = (props) => {
   const { description } = props;
   const { siteToVisit } = props;
   return (
-    <Card
-      style={{ width: 500, height: 300 }}
-      title={title}
-      cover={<img src={source} alt={alt} />}
-    >
+    <Card title={title} style={{ minHeight: 300 }}>
+      <img
+        src={source}
+        alt={alt}
+        style={{ width: 150, height: 40, margin: "0 auto" }}
+      />
       <p>{description}</p>
-      <a href={siteToVisit} target="blank">
+      <a
+        href={siteToVisit}
+        target="blank"
+        style={{ color: "#171D1C", textDecoration: "underline" }}
+      >
         Visiter le site
       </a>
     </Card>

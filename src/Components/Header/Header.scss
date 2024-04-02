@@ -1,20 +1,30 @@
 .header {
-    display: flex;
-    justify-content: space-between;
+
+    background-color: #EFE9F4;
+    height: 100%;
+    min-height: 100px;
 
     &--nav {
         list-style: none;
         display: flex;
         gap: 12px;
-        margin-right: 12px;
+        margin-right: 24px;
+        font-size: 18px;
 
         &__link {
             text-decoration: none;
-            color: black;
+            color: #171D1C;
 
             &:hover {
                 text-decoration: underline;
+                color: #171D1C;
             }
         }
+    }
+
+    &--title {
+        text-align: left;
+        width: 50%;
+
     }
 }

@@ -1,5 +1,6 @@
 import { Flex, Modal } from "antd";
 import React, { useRef, useState } from "react";
+// eslint-disable-next-line
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
 
@@ -41,40 +42,65 @@ const Contact = () => {
 
   return (
     <section>
-      <h2>Me contacter pour vos projets</h2>
+      <div className="wrapper-form">
+        <Flex vertical align="center">
+          <h2 className="contact-title">Me contacter pour vos projets</h2>
 
-      <form
-        ref={form}
-        id="contactForm"
-        onSubmit={handleSubmit}
-        style={{ width: 500 }}
-      >
-        <Flex vertical>
-          <label htmlFor="nom">Nom et Prénom</label>
-          <input type="text" id="nom" name="nom" placeholder="Nom et Prénom" />
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="exemple@mail.fr"
-          />
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" placeholder="Votre message" />
-          <button type="submit">Envoyer</button>
+          <form
+            ref={form}
+            id="contactForm"
+            onSubmit={handleSubmit}
+            className="form"
+          >
+            <Flex className="contact-flex" vertical>
+              <label className="form--label" htmlFor="nom">
+                Nom et Prénom
+              </label>
+              <input
+                className="form--input"
+                type="text"
+                id="nom"
+                name="nom"
+                placeholder="Nom et Prénom"
+              />
+              <label className="form--label" htmlFor="email">
+                Email
+              </label>
+              <input
+                className="form--input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="exemple@mail.fr"
+              />
+              <label className="form--label" htmlFor="message">
+                Message
+              </label>
+              <textarea
+                style={{ paddingBottom: 100 }}
+                className="form--input"
+                id="message"
+                name="message"
+                placeholder="Votre message"
+              />
+              <button className="form--btn" type="submit">
+                Envoyer
+              </button>
+            </Flex>
+          </form>
+          <Modal
+            title="Merci pour votre intérêt"
+            open={isModalOpen}
+            onOk={handleOk}
+            onCancel={handleCancel}
+            cancelButtonProps={{
+              className: "cancel-btn",
+            }}
+          >
+            <p>{modalContent}</p>
+          </Modal>
         </Flex>
-        <Modal
-          title="Merci pour votre intérêt"
-          open={isModalOpen}
-          onOk={handleOk}
-          onCancel={handleCancel}
-          cancelButtonProps={{
-            className: "cancel-btn",
-          }}
-        >
-          <p>{modalContent}</p>
-        </Modal>
-      </form>
+      </div>
     </section>
   );
 };

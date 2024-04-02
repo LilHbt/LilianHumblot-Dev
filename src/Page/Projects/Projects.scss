@@ -1,0 +1,17 @@
+.projects-wrapper {
+    margin: 36px auto;
+    padding: 48px;
+    border: 1px solid;
+    width: 75%;
+    border-radius: 25px;
+    background-color: #EFE9F4;
+    color: #171D1C;
+}
+
+@media (max-width:768px) {
+    .project-flex {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

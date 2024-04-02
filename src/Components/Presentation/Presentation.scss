@@ -1,0 +1,21 @@
+.presentation {
+    &--wrapper {
+        margin: 36px auto;
+        padding: 48px;
+        border: 1px solid;
+        width: 75%;
+        border-radius: 25px;
+        background-color: #EFE9F4;
+        color: #171D1C;
+    }
+
+    &--title {
+        font-size: 28px;
+        margin: 0 auto 24px;
+    }
+
+    &--text {
+        font-size: 20px;
+    }
+
+}
