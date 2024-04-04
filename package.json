@@ -1,7 +1,7 @@
 {
   "name": "lilianhumblot-dev",
   "version": "0.1.0",
-  "homepage": "https://LilHbt.github.io/LilianHumblot-Dev",
+  "homepage": "https://LilHbt.github.io/LilianHumblot-Dev/",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^5.3.4",

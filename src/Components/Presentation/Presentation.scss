@@ -1,7 +1,7 @@
 .presentation {
     &--wrapper {
         margin: 36px auto;
-        padding: 48px;
+        padding: 200px 48px;
         border: 1px solid;
         width: 75%;
         border-radius: 25px;
@@ -16,6 +16,7 @@
 
     &--text {
         font-size: 20px;
+        padding: 20px;
     }
 
 }

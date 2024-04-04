@@ -21,11 +21,7 @@ const Home = () => {
         <CTA buttonText="Voir mes projets" ctaLink="/projects" />
         <CTA buttonText="Me contacter" ctaLink="/contact" />
       </Flex>
-      <FloatButton
-        icon={<ArrowUpOutlined />}
-        tooltip="Haut de page"
-        onClick={goToTop}
-      />
+      <FloatButton icon={<ArrowUpOutlined />} onClick={goToTop} />
     </div>
   );
 };

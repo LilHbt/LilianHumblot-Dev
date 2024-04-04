@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { Flex, Space, Tabs } from "antd";
 import CardCompetences from "./CardCompetences";
 import logoReact from "../../Assets/img/React.svg";
-import logoHTMLCSS from "../../Assets/img/CSS3 HTML5.png";
+import logoHTMLCSS from "../../Assets/img/logo-html-css.png";
 import logoJS from "../../Assets/img/logo-javascript.svg";
 import logoKasa from "../../Assets/img/Kasa-logo.png";
 import logoOMF from "../../Assets/img/ohmyfood.png";
 import imgCom from "../../Assets/img/comIcon.png";
 import imgAdaptation from "../../Assets/img/adaptation.png";
 import imgFlex from "../../Assets/img/flexibility.svg";
-
+import { useInView } from "react-intersection-observer";
 import "./SectionCompetences.scss";
 import CardProject from "../CardProject/CardProject.jsx";
+import "animate.css";
 
 const SectionCompetences = () => {
   const [tabKey, setTabKey] = useState("1");
@@ -105,24 +106,37 @@ const SectionCompetences = () => {
       ),
     },
   ];
+  const { ref, inView, entry } = useInView({
+    triggerOnce: true,
+  });
+  const sectionInView = () => {
+    if (inView === true) {
+      document
+        .getElementById("animate-div")
+        .classList.add("animate__animated", "animate__zoomIn");
+    }
+  };
+  sectionInView();
   return (
     <section>
       <div className="competences--wrapper">
-        <div>
-          <h3>Mes compétences</h3>
-          <p>que je mettrai en oeuvre pour vos projets</p>
+        <div id="animate-div" ref={ref}>
+          <div>
+            <h3>Mes compétences</h3>
+            <p>que je mettrai en oeuvre pour vos projets</p>
+          </div>
+          <Flex justify="center" gap={100}>
+            <Tabs
+              animated
+              size="middle"
+              centered
+              defaultActiveKey="1"
+              items={items}
+              onChange={onChange}
+              className="tabs"
+            />
+          </Flex>
         </div>
-        <Flex justify="center" gap={100}>
-          <Tabs
-            animated
-            size="middle"
-            centered
-            defaultActiveKey="1"
-            items={items}
-            onChange={onChange}
-            className="tabs"
-          />
-        </Flex>
       </div>
     </section>
   );
