@@ -5,7 +5,7 @@ const Presentation = () => {
   return (
     <section className="presentation">
       <div className="presentation--wrapper">
-        <h2 className="presentation--title">Developpeur web junior</h2>
+        <h2 className="presentation--title">Developpeur et intégrateur web </h2>
         <p className="presentation--text">
           Je suis Humblot Lilian, un jeune developpeur web spécialisé dans le
           Front-End.

@@ -39,7 +39,8 @@ const SectionCompetences = () => {
                   title="Kasa"
                   source={logoKasa}
                   alt="Logo Kasa"
-                  description="Site de location immobiliaire créé en utilisant React."
+                  description="Site de location immobiliaire créé en utilisant React, la bibliothèque Javascript la plus populaire parmit les developpeurs web.
+                  L'utilisaion de React permet d'obtenir un code réutilisable et facilment maintenable."
                   siteToVisit="https://lilhbt.github.io/Kasa/"
                 />
               }
@@ -64,7 +65,8 @@ const SectionCompetences = () => {
                   title="Oh-My-Food"
                   source={logoOMF}
                   alt="Logo Oh-My-Food"
-                  description="Projet de site de prise de commande, utilisant uniquement HTML5/CSS3 pour l'intégralite du code."
+                  description="Projet de site de prise de commande, utilisant uniquement HTML5/CSS3 pour l'intégralite du code.
+                  Cette technologie permet de créer un site vitrine très rapidement avec enormément de possiblités pour le style."
                   siteToVisit="https://lilhbt.github.io/Oh-my-food/"
                 />
               }
@@ -106,7 +108,7 @@ const SectionCompetences = () => {
       ),
     },
   ];
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     triggerOnce: true,
   });
   const sectionInView = () => {
