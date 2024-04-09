@@ -18,38 +18,36 @@ const Contact = () => {
   let form = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsModalOpen(true);
-    setModalContent(
-      <FormattedMessage
-        id="__EMAILSUCCESS__"
-        defaultMessage={
-          "Votre message a bien été envoyé, je vous recontacte dans les plus bref délais!"
+    emailjs
+      .sendForm("service_yvz5svo", "template_1lgg7zq", form.current, {
+        publicKey: "k7duhNXhHEPFJJOkB",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setIsModalOpen(true);
+          setModalContent(
+            <FormattedMessage
+              id="__EMAILSUCCESS__"
+              defaultMessage={
+                "Votre message a bien été envoyé, je vous recontacte dans les plus bref délais!"
+              }
+            />
+          );
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setIsModalOpen(true);
+          setModalContent(
+            <FormattedMessage
+              id="__EMAILERROR__"
+              defaultMessage={
+                "Votre message n'a pas pu etre envoyé, veuillez réessayer ultérieurement ou me contacter par mail a l'adresse lilianhumblot.dev@gmail.com. "
+              }
+            />
+          );
         }
-      />
-    );
-    // emailjs
-    //   .sendForm("service_yvz5svo", "template_1lgg7zq", form.current, {
-    //     publicKey: "k7duhNXhHEPFJJOkB",
-    //   })
-    //   .then(
-    //     () => {
-    //       console.log("SUCCESS!");
-
-    //     },
-    //     (error) => {
-    //       console.log("FAILED...", error.text);
-    //       setIsModalOpen(true);
-    //       setModalContent(
-    //         <FormattedMessage
-    //     id="__EMAILERROR__"
-    //     defaultMessage={
-    //       "Votre message n'a pas pu etre envoyé, veuillez réessayer ultérieurement ou me contacter par mail a l'adresse lilianhumblot.dev@gmail.com. "
-    //     }
-    //   />
-
-    //       );
-    //     }
-    //   );
+      );
   };
 
   return (
