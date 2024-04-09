@@ -29,6 +29,12 @@
     }
 }
 
+.btn-language {
+    cursor: pointer;
+    border: none;
+    background-color: #EFE9F4;
+}
+
 @media (max-width:480px) {
     .header--nav {
         flex-direction: column;

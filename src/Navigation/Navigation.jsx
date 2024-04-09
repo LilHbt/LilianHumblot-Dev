@@ -6,10 +6,10 @@ import ErrorPage from "../Page/ErrorPage/ErrorPage";
 import Home from "../Page/Home/Home";
 import Projects from "../Page/Projects/Projects";
 
-const Navigation = () => {
+const Navigation = ({ language, setLanguage }) => {
   return (
     <Router>
-      <Header />
+      <Header language={language} setLanguage={setLanguage} />
       <Routes>
         {["/", "/LilianHumblot-Dev"].map((path) => (
           <Route key={path} path={path} element={<Home />} />

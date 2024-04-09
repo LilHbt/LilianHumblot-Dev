@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 // eslint-disable-next-line
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
+import { FormattedMessage } from "react-intl";
 
 const Contact = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +20,12 @@ const Contact = () => {
     e.preventDefault();
     setIsModalOpen(true);
     setModalContent(
-      "Votre message a bien été envoyé, je vous recontacte dans les plus bref délais!"
+      <FormattedMessage
+        id="__EMAILSUCCESS__"
+        defaultMessage={
+          "Votre message a bien été envoyé, je vous recontacte dans les plus bref délais!"
+        }
+      />
     );
     // emailjs
     //   .sendForm("service_yvz5svo", "template_1lgg7zq", form.current, {
@@ -34,7 +40,13 @@ const Contact = () => {
     //       console.log("FAILED...", error.text);
     //       setIsModalOpen(true);
     //       setModalContent(
-    //         "Votre message n'a pas pu etre envoyé, veuillez réessayer ultérieurement ou me contacter par mail a l'adresse lilianhumblot.dev@gmail.com. "
+    //         <FormattedMessage
+    //     id="__EMAILERROR__"
+    //     defaultMessage={
+    //       "Votre message n'a pas pu etre envoyé, veuillez réessayer ultérieurement ou me contacter par mail a l'adresse lilianhumblot.dev@gmail.com. "
+    //     }
+    //   />
+
     //       );
     //     }
     //   );
@@ -44,7 +56,12 @@ const Contact = () => {
     <section>
       <div className="wrapper-form">
         <Flex vertical align="center">
-          <h2 className="contact-title">Me contacter pour vos projets</h2>
+          <h2 className="contact-title">
+            <FormattedMessage
+              id="__CONTACTTITLE__"
+              defaultMessage={"Me contacter pour vos projets"}
+            />
+          </h2>
 
           <form
             ref={form}
@@ -54,14 +71,17 @@ const Contact = () => {
           >
             <Flex className="contact-flex" vertical>
               <label className="form--label" htmlFor="nom">
-                Nom et Prénom
+                <FormattedMessage
+                  id="__NAME__"
+                  defaultMessage={"Nom et prénom"}
+                />
               </label>
               <input
                 className="form--input"
                 type="text"
                 id="nom"
                 name="nom"
-                placeholder="Nom et Prénom"
+                placeholder="John Doe"
               />
               <label className="form--label" htmlFor="email">
                 Email
@@ -81,15 +101,23 @@ const Contact = () => {
                 className="form--input"
                 id="message"
                 name="message"
-                placeholder="Votre message"
+                placeholder="Message"
               />
               <button className="form--btn" type="submit">
-                Envoyer
+                <FormattedMessage
+                  id="__CONTACTBTN__"
+                  defaultMessage={"Envoyer"}
+                />
               </button>
             </Flex>
           </form>
           <Modal
-            title="Merci pour votre intérêt"
+            title={
+              <FormattedMessage
+                id="__CONTACTMODALMESSAGE__"
+                defaultMessage={"Merci pour votre intérêt"}
+              />
+            }
             open={isModalOpen}
             onOk={handleOk}
             onCancel={handleCancel}

@@ -1,5 +1,6 @@
 import { Card } from "antd";
 import React from "react";
+import { FormattedMessage } from "react-intl";
 
 const CardProject = (props) => {
   const { title } = props;
@@ -20,7 +21,10 @@ const CardProject = (props) => {
         target="blank"
         style={{ color: "#171D1C", textDecoration: "underline" }}
       >
-        Visiter le site
+        <FormattedMessage
+          id="__VISITSITE__"
+          defaultMessage={"Visiter le site"}
+        />
       </a>
     </Card>
   );
