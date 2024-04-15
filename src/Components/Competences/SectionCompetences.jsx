@@ -21,7 +21,7 @@ const SectionCompetences = () => {
   const onChange = (key) => {
     setTabKey(key);
   };
-  //AJOUTER CARTE REDUX ET TEST //
+
   const items = [
     {
       key: "1",
