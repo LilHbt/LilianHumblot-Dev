@@ -9,17 +9,17 @@ const Presentation = () => {
         <h2 className="presentation--title">
           <FormattedMessage
             id="__PRESENTATIONTITLE__"
-            defaultMessage="Developpeur et intégrateur web"
+            defaultMessage="Développeur et intégrateur web"
           />{" "}
         </h2>
 
         <p className="presentation--text">
           <FormattedMessage
             id="__PRESENTATION__"
-            defaultMessage="Je suis Humblot Lilian, un jeune developpeur web spécialisé dans
+            defaultMessage="Je suis Humblot Lilian, un jeune développeur web spécialisé dans
           le Front-End. Mettant les besoins du client au centre du processus de
           developpement, je saurai répondre à vos attentes et vous proposer
-          les solutions les plus adaptées pour accroitre votre activité"
+          les solutions les plus adaptées pour accroître votre activité"
           />
         </p>
       </div>

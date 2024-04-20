@@ -44,7 +44,7 @@ const SectionCompetences = () => {
                 <FormattedMessage
                   id="__REACTDESCRIPTION__"
                   defaultMessage={
-                    "React est une bibliothèque basée sur le language Javascript permettant de fractionner le code en composant reutilisable et fournissant beaucoup d'outils pour améliorer le developpement. React est extremement populaire auprès de nombreux developpeurs."
+                    "React est une bibliothèque basée sur le language Javascript permettant de fractionner le code en composant reutilisable et fournissant beaucoup d'outils pour améliorer le développement. React est extrêmement populaire auprès de nombreux developpeurs."
                   }
                 />
               }
@@ -57,7 +57,7 @@ const SectionCompetences = () => {
                     <FormattedMessage
                       id="__KASADESCRIPTION__"
                       defaultMessage={
-                        "Site de location immobiliaire créé en utilisant React, la bibliothèque Javascript la plus populaire parmit les developpeurs web. L'utilisaion de React permet d'obtenir un code réutilisable et facilment maintenable."
+                        "Site de location immobiliaire créé en utilisant React, la bibliothèque Javascript la plus populaire parmit les développeurs web. L'utilisation de React permet d'obtenir un code réutilisable et facilment maintenable."
                       }
                     />
                   }
@@ -89,7 +89,7 @@ const SectionCompetences = () => {
                 <FormattedMessage
                   id="__HTMLDESCRIPTION__"
                   defaultMessage={
-                    "Les languages HTML et CSS forment la base du developement web, le premier permet de structurer la page et ensuite le second offre la possibilité de styliser le site."
+                    "Les languages HTML et CSS forment la base du dévelopement web, le premier permet de structurer la page et ensuite le second offre la possibilité de styliser le site."
                   }
                 />
               }
@@ -139,7 +139,7 @@ const SectionCompetences = () => {
                 <FormattedMessage
                   id="__COMMUNICATIONDESCRIPTION__"
                   defaultMessage={
-                    "Grâce à mes expériences professionelle passée, j'ai pu acquérir une grande capacité de communication afin d'être certain d'obtenir et de transmettre toutes les informations necéssaire au bon déroulemnt d'un projet."
+                    "Grâce à mes expériences professionelle passée, j'ai pu acquérir une grande capacité de communication afin d'être certain d'obtenir et de transmettre toutes les informations necéssaire au bon déroulement d'un projet."
                   }
                 />
               }
@@ -177,7 +177,7 @@ const SectionCompetences = () => {
                 <FormattedMessage
                   id="__FLEXIBILITYDESCRIPTION__"
                   defaultMessage={
-                    "Je saurai mettre en place de nouvelle méthode et toujours rester au courant des nouveautés afin de vous proposer un projet au gout du jour."
+                    "Je saurai mettre en place de nouvelle méthode et toujours rester au courant des nouveautés afin de vous proposer un projet au goût du jour."
                   }
                 />
               }
