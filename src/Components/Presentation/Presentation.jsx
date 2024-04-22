@@ -17,9 +17,9 @@ const Presentation = () => {
           <FormattedMessage
             id="__PRESENTATION__"
             defaultMessage="Je suis Humblot Lilian, un jeune développeur web spécialisé dans
-          le Front-End. Mettant les besoins du client au centre du processus de
-          developpement, je saurai répondre à vos attentes et vous proposer
-          les solutions les plus adaptées pour accroître votre activité"
+          le Front-End. J'ai suivi une formation d'intégrateur web sur la plateforme OpenClassroom, qui me permet d'obtenir un diplôme de niveau 5 (Bac+2).Mettant les besoins du client au centre du processus de
+          développement, je saurai répondre à vos attentes et vous proposer
+          les solutions les plus adaptées pour accroître votre activité. "
           />
         </p>
       </div>
