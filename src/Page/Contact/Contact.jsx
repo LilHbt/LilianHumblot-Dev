@@ -80,6 +80,7 @@ const Contact = () => {
                 id="nom"
                 name="nom"
                 placeholder="John Doe"
+                required
               />
               <label className="form--label" htmlFor="email">
                 Email
@@ -90,6 +91,7 @@ const Contact = () => {
                 id="email"
                 name="email"
                 placeholder="exemple@mail.fr"
+                required
               />
               <label className="form--label" htmlFor="message">
                 Message
@@ -100,6 +102,7 @@ const Contact = () => {
                 id="message"
                 name="message"
                 placeholder="Message"
+                required
               />
               <button className="form--btn" type="submit">
                 <FormattedMessage
