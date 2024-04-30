@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/LilianHumblot-Dev/static/css/main.987844e9.css",
+    "main.css": "/LilianHumblot-Dev/static/css/main.902d9eaa.css",
     "main.js": "/LilianHumblot-Dev/static/js/main.a2aebc10.js",
     "static/js/453.562b1eff.chunk.js": "/LilianHumblot-Dev/static/js/453.562b1eff.chunk.js",
     "static/media/comIcon.png": "/LilianHumblot-Dev/static/media/comIcon.7ff47e86ae15c5bcb0f0.png",
@@ -14,12 +14,12 @@
     "index.html": "/LilianHumblot-Dev/index.html",
     "static/media/flexibility.svg": "/LilianHumblot-Dev/static/media/flexibility.06e1b5e7d7349ec6902f303499e82a14.svg",
     "static/media/logo-javascript.svg": "/LilianHumblot-Dev/static/media/logo-javascript.00f3e5cf8bcf4ae623b3835ca5791b15.svg",
-    "main.987844e9.css.map": "/LilianHumblot-Dev/static/css/main.987844e9.css.map",
+    "main.902d9eaa.css.map": "/LilianHumblot-Dev/static/css/main.902d9eaa.css.map",
     "main.a2aebc10.js.map": "/LilianHumblot-Dev/static/js/main.a2aebc10.js.map",
     "453.562b1eff.chunk.js.map": "/LilianHumblot-Dev/static/js/453.562b1eff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.987844e9.css",
+    "static/css/main.902d9eaa.css",
     "static/js/main.a2aebc10.js"
   ]
 }
