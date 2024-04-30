@@ -1,18 +1,20 @@
 import React from "react";
 import "./Presentation.scss";
 import { FormattedMessage } from "react-intl";
+import backgroundEllipse from "../../Assets/img/background-ellipse.webp";
 
 const Presentation = () => {
   return (
     <section className="presentation">
       <div className="presentation--wrapper">
-        <h2 className="presentation--title">
-          <FormattedMessage
-            id="__PRESENTATIONTITLE__"
-            defaultMessage="Développeur et intégrateur web"
-          />{" "}
-        </h2>
-
+        <div className="title-div">
+          <h2 className="presentation--title">
+            <FormattedMessage
+              id="__PRESENTATIONTITLE__"
+              defaultMessage="A propos"
+            />
+          </h2>
+        </div>
         <p className="presentation--text">
           <FormattedMessage
             id="__PRESENTATION__"
@@ -23,6 +25,12 @@ const Presentation = () => {
           />
         </p>
       </div>
+      <img
+        rel="preload"
+        className="background-ellipse"
+        src={backgroundEllipse}
+        alt="background"
+      />
     </section>
   );
 };

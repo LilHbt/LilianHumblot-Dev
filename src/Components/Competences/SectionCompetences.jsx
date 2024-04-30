@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Flex, Space, Tabs } from "antd";
+import { Flex, Tabs } from "antd";
 import CardCompetences from "./CardCompetences";
 import logoReact from "../../Assets/img/React.svg";
 import logoHTMLCSS from "../../Assets/img/logo-html-css.png";
@@ -34,7 +34,7 @@ const SectionCompetences = () => {
 
       children: (
         <div>
-          <Space direction="vertical" size={16}>
+          <div className="cards-flex">
             <CardCompetences
               tabKey={tabKey}
               title="React"
@@ -44,12 +44,13 @@ const SectionCompetences = () => {
                 <FormattedMessage
                   id="__REACTDESCRIPTION__"
                   defaultMessage={
-                    "React est une bibliothèque basée sur le language Javascript permettant de fractionner le code en composant reutilisable et fournissant beaucoup d'outils pour améliorer le développement. React est extrêmement populaire auprès de nombreux developpeurs."
+                    "React est une bibliothèque basée sur le language Javascript permettant de fractionner le code en composant réutilisable et fournissant beaucoup d'outils pour améliorer le développement. React est extrêmement populaire auprès de nombreux développeurs."
                   }
                 />
               }
               modalContent={
                 <CardProject
+                  style={{ margin: "50px " }}
                   title="Kasa"
                   source={logoKasa}
                   alt="Logo Kasa"
@@ -110,7 +111,7 @@ const SectionCompetences = () => {
                 />
               }
             />
-          </Space>
+          </div>
         </div>
       ),
     },
@@ -124,7 +125,7 @@ const SectionCompetences = () => {
       ),
       children: (
         <div>
-          <Space direction="vertical" size={16}>
+          <div className="cards-flex">
             <CardCompetences
               tabKey={tabKey}
               logo={imgCom}
@@ -182,7 +183,7 @@ const SectionCompetences = () => {
                 />
               }
             />
-          </Space>
+          </div>
         </div>
       ),
     },
@@ -200,34 +201,37 @@ const SectionCompetences = () => {
   sectionInView();
   return (
     <section>
-      <div className="competences--wrapper">
-        <div id="animate-div" ref={ref}>
-          <div>
-            <h3>
-              <FormattedMessage
-                id="__COMPETENCESTITLE__"
-                defaultMessage={"Mes compétences"}
-              />
-            </h3>
-            <p>
-              <FormattedMessage
-                id="__COMPETENCESTEXT__"
-                defaultMessage={"que je mettrai en oeuvre pour vos projets"}
-              />
-            </p>
-          </div>
-          <Flex justify="center" gap={100}>
-            <Tabs
-              animated
-              size="middle"
-              centered
-              defaultActiveKey="1"
-              items={items}
-              onChange={onChange}
-              className="tabs"
-            />
-          </Flex>
-        </div>
+      <div className="competences--text">
+        <h3 className="competences--text__title">
+          <FormattedMessage
+            id="__COMPETENCESTITLE__"
+            defaultMessage={"Mes compétences"}
+          />
+        </h3>
+        <p className="competences--text__subtitle">
+          <FormattedMessage
+            id="__COMPETENCESTEXT__"
+            defaultMessage={"que je mettrai en oeuvre pour vos projets"}
+          />
+        </p>
+      </div>
+      <div id="animate-div" ref={ref}>
+        <Flex
+          style={{ marginTop: "64px" }}
+          justify="center"
+          align="center"
+          gap={100}
+        >
+          <Tabs
+            animated
+            size="middle"
+            centered
+            defaultActiveKey="1"
+            items={items}
+            onChange={onChange}
+            className="tabs"
+          />
+        </Flex>
       </div>
     </section>
   );

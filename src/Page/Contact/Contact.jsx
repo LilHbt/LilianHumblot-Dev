@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
 import { FormattedMessage } from "react-intl";
+import backgroundEllipse from "../../Assets/img/background-ellipse.webp";
 
 const Contact = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -51,7 +52,13 @@ const Contact = () => {
   };
 
   return (
-    <section>
+    <section
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <div className="wrapper-form">
         <Flex vertical align="center">
           <h2 className="contact-title">
@@ -130,6 +137,13 @@ const Contact = () => {
           </Modal>
         </Flex>
       </div>
+      <img
+        rel="preload"
+        style={{ width: "100%", height: "700px" }}
+        src={backgroundEllipse}
+        alt="background"
+        className="background-form"
+      />
     </section>
   );
 };

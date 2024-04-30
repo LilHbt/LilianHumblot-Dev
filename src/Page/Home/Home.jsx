@@ -6,6 +6,7 @@ import { ArrowUpOutlined } from "@ant-design/icons";
 import CTA from "../../Components/CTA/CTA";
 import "./Home.scss";
 import { FormattedMessage } from "react-intl";
+import { Banner } from "../../Components/Banner/Banner";
 
 const Home = () => {
   const goToTop = () => {
@@ -16,9 +17,10 @@ const Home = () => {
   };
   return (
     <div>
+      <Banner />
       <Presentation />
       <SectionCompetences />
-      <Flex className="cta-flex" justify="center" align="center">
+      <Flex className="cta-flex" justify="center" align="center" gap={30}>
         <CTA
           buttonText={
             <FormattedMessage

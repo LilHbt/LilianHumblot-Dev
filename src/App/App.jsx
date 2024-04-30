@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Navigation from "../Navigation/Navigation";
 import { ConfigProvider } from "antd";
 import { useState } from "react";
@@ -26,7 +26,20 @@ function App() {
     <ConfigProvider
       theme={{
         token: {
+          colorBorder: "#171D1C",
+          colorBgContainer: "#EFE9F4",
           colorPrimary: "#171D1C",
+          fontFamily: "Roboto",
+        },
+        components: {
+          Tabs: {
+            horizontalItemGutter: 48,
+            titleFontSize: 14,
+
+            itemColor: "#EFE9F4",
+            itemHoverColor: "#EFE9F4",
+            itemSelectedColor: "#EFE9F4",
+          },
         },
       }}
     >

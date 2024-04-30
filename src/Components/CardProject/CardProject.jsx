@@ -9,7 +9,16 @@ const CardProject = (props) => {
   const { description } = props;
   const { siteToVisit } = props;
   return (
-    <Card title={title} style={{ minHeight: 300 }}>
+    <Card
+      className="card-project"
+      title={title}
+      style={{
+        minHeight: 300,
+        width: "66%",
+        maxWidth: "500px",
+        margin: "auto 50px",
+      }}
+    >
       <img
         src={source}
         alt={alt}

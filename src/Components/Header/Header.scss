@@ -25,6 +25,7 @@
     &--title {
         text-align: left;
         width: 50%;
+        margin-left: 50px;
 
     }
 }
@@ -35,8 +36,21 @@
     background-color: #EFE9F4;
 }
 
-@media (max-width:480px) {
+@media (max-width:769px) {
+    .header--title {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width:560px) {
+    .header--title {
+        margin-right: 30px;
+    }
+
     .header--nav {
         flex-direction: column;
+        margin-bottom: 0;
+        font-size: 14px;
     }
 }

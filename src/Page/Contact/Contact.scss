@@ -1,5 +1,6 @@
 .cancel-btn {
     display: none;
+
 }
 
 .contact-title {
@@ -8,12 +9,15 @@
 
 .wrapper-form {
     margin: 36px auto;
-    padding: 40px;
+    padding: 40px 40px 0 40px;
     border: 1px solid;
-    width: 75%;
+    width: 66%;
+    height: 80%;
     border-radius: 25px;
     background-color: #EFE9F4;
     color: #171D1C;
+    position: absolute;
+
 }
 
 .form {
@@ -75,7 +79,15 @@
         }
     }
 
+    .wrapper-form {
+        position: static;
+    }
+
     .contact-flex {
         align-items: center;
+    }
+
+    .background-form {
+        display: none;
     }
 }

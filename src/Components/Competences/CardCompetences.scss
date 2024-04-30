@@ -1,6 +1,19 @@
 .cardCompetences {
-    width: 500px;
+    width: 90%;
+    max-width: 350px;
+    height: 400px;
+    margin: 50px auto;
 
+}
+
+
+
+
+
+.ant-card-body {
+    position: relative;
+    bottom: 20px;
+    line-height: 25px;
 }
 
 .logo {
@@ -8,9 +21,12 @@
     height: 100px;
 }
 
+
 @media (max-width:768px) {
     .cardCompetences {
-        width: 300px;
+
+        display: flex;
+        flex-direction: column;
 
 
     }
