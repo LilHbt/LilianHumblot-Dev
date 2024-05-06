@@ -5,6 +5,7 @@ import { Flex } from "antd";
 import { FormattedMessage } from "react-intl";
 import frenchFlag from "../../Assets/img/france.png";
 import ukFlag from "../../Assets/img/united-kingdom.png";
+import LHDLogo from "../../Assets/img/LHD-Logo.svg";
 
 const Header = ({ language, setLanguage }) => {
   const changeLanguage = () => {
@@ -21,7 +22,11 @@ const Header = ({ language, setLanguage }) => {
         align="center"
         style={{ height: "100%", minHeight: 100 }}
       >
-        <h1 className="header--title">Lilian Humblot Dev</h1>
+        <img
+          className="header--logo"
+          src={LHDLogo}
+          alt="Logo Lilian Humblot Dev"
+        />
         <ul className="header--nav">
           <li>
             <Link className="header--nav__link" to="/">

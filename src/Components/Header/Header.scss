@@ -22,10 +22,9 @@
         }
     }
 
-    &--title {
-        text-align: left;
-        width: 50%;
+    &--logo {
         margin-left: 50px;
+        width: 100px;
 
     }
 }
@@ -44,7 +43,7 @@
 }
 
 @media (max-width:560px) {
-    .header--title {
+    .header--logo {
         margin-right: 30px;
     }
 
